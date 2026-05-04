@@ -1,0 +1,14 @@
+# ORCA input file
+
+# Functional
+!BLYP DEF2-SVP DEF2-SVP/C RIJCOSX
+
+# Calculate Energy (Single Point) to estimate HOMO/LUMO at each stage
+# !ENERGY
+
+# Number of processors to use for Parallel Processing
+%PAL
+	NPROCS 1
+END
+
+*xyzfile 0 1 first_frame_s1.xyz

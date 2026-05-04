@@ -1,0 +1,56 @@
+● Z-Matrix Format Explanation
+
+  A z-matrix (or internal coordinate matrix) is a way to represent molecular geometry using internal coordinates (bonds, angles, dihedrals) rather than Cartesian
+  coordinates. Each line defines one atom's position relative to previously defined atoms.
+
+  Format Structure:
+
+  ATOM  CONN1  CONN2  CONN3    DISTANCE    ANGLE      DIHEDRAL
+
+  Column Breakdown:
+
+  1. ATOM - Element symbol (N, H, C, O)
+  2. CONN1 - Bond connection (atom number, 1-based)
+  3. CONN2 - Angle connection (atom number, 1-based)
+  4. CONN3 - Dihedral connection (atom number, 1-based)
+  5. DISTANCE - Bond length in Angstroms
+  6. ANGLE - Bond angle in degrees
+  7. DIHEDRAL - Dihedral angle in degrees
+
+  How it Works:
+
+  Line 1: N  0  0  0  0.000000  0.00000  0.00000
+  - First atom (N) is placed at origin
+  - No connections (all 0s), no internal coordinates needed
+
+  Line 2: H  1  0  0  1.144956  0.00000  0.00000
+  - H atom connected to atom 1 (N)
+  - Distance: 1.145 Å from N
+  - No angle/dihedral (only 1 previous atom)
+
+  Line 3: H  1  2  0  0.967439  119.715  0.00000
+  - H atom connected to atom 1 (N)
+  - Distance: 0.967 Å from N
+  - Angle: 119.7° with respect to N-H₂ bond
+  - No dihedral (only 2 previous atoms)
+
+  Line 4: H  1  2  3  0.999877  97.144  127.095
+  - H atom connected to atom 1 (N)
+  - Distance: 1.000 Å from N
+  - Angle: 97.1° with respect to N-H₂ bond
+  - Dihedral: 127.1° with respect to H₃-N-H₂-H₃ plane
+
+  Key Points:
+
+  - Sequential Definition: Each atom is defined using only previously defined atoms
+  - 1-based Indexing: Atom numbers start from 1 (not 0)
+  - Internal Coordinates: Uses chemically meaningful distances, angles, and dihedrals
+  - Redundancy: The same z-matrix can represent the same molecule with different internal coordinates chosen
+
+  This format is particularly useful for:
+  - Conformational analysis (tracking how bonds rotate)
+  - Geometry optimization (easier to constrain internal coordinates)
+  - Chemical intuition (distances and angles have direct physical meaning)
+
+  This script reads this z-matrix and calculates these same internal coordinates for each frame of the trajectory, allowing one to track how the molecular geometry
+  changes over time.
