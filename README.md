@@ -28,7 +28,7 @@ Use [version 0.3.4](https://github.com/sissa-data-science/DADApy/releases/tag/v0
 For installation instructions, in particular using Jax to speed up the DII calculations refer to the DADApy repository.
 
 1. compute descriptor divergence matrices with `1_KLD.py` for 2 electronic states, say, S1 and S0
-2. derive internal coordinates with `calculate_internal_coords.py` for all frames and also derive all the principal components using `2_PCA.ipynb` -- the `orca.inp` sample file shows how to run an orca job to generate the Z-Matrix first (and then one can add further coordinates to the `calculate_internal_coords.py` script as needed -- this Z-Matrix should be copy-pasted into `zmat.dat` and then the script should run after that
+2. derive internal coordinates with `calculate_internal_coords.py` for all frames and also derive all the principal components using `2_PCA.ipynb` -- the `orca.inp` sample file shows how to run an orca job to generate the Z-Matrix first (and then one can add further coordinates to the `calculate_internal_coords.py` script using the `extra_bonds/angles/dihedrals` section at the end as needed -- this Z-Matrix should be copy-pasted into `zmat.dat` and then the script should run after that
 3. using `3_IIB.ipynb` or `4_DIIB.ipynb` **(preferred)** to calculate the coulomb/descriptor matrix hotspots from the output of step 1
 4. compare which internal coordinates best correlate to the hotspots with `5_dii-internal_vs_kld-hotspots.py`
 5. use `6_DIIB-feature-selection.ipynb` or `8_DIIB-feature-selection-FOSC.ipynb`  or `9_PCA-DII.ipynb` to calculate which internal coordinates/PCs best correspond to `ΔE`/FOSC (this uses some filtered internal coordinates from the previous step)
