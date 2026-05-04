@@ -23,8 +23,8 @@ on the `Molecular_Motors/` case study.
 
 ## Workflow:
 
-Run the scripts in order. Ensure you have DADApy[https://github.com/sissa-data-science/DADApy] installed.
-Use version 0.3.4[https://github.com/sissa-data-science/DADApy/releases/tag/v0.3.4].
+Run the scripts in order. Ensure you have [DADApy](https://github.com/sissa-data-science/DADApy) installed.
+Use [version 0.3.4](https://github.com/sissa-data-science/DADApy/releases/tag/v0.3.4) to reproduce the results here.
 For installation instructions, in particular using Jax to speed up the DII calculations refer to the DADApy repository.
 
 1. compute descriptor divergence matrices with `1_KLD.py` for 2 electronic states, say, S1 and S0
