@@ -35,3 +35,18 @@ For installation instructions, in particular using Jax to speed up the DII calcu
 
 ## Citation:
 
+Please cite: https://arxiv.org/abs/2605.08381
+
+```
+@article{Banerjee2026,
+title={Machine learning the non-radiative decay modes in photochemical processes},
+url={http://arxiv.org/abs/2605.08381},
+DOI={10.48550/arXiv.2605.08381},
+note={arXiv:2605.08381},
+number={arXiv:2605.08381},
+publisher={arXiv},
+author={Banerjee, Debarshi and Mirón, Gonzalo Díaz and Rodriguez, Alex and Hassanali, Ali},
+year={2026},
+month=may}
+
+```
