@@ -17,7 +17,6 @@ on the `Molecular_Motors/` case study.
 - `6_DIIB-feature-selection.ipynb`: selects internal coordinates from DII-hotspot outputs and runs DII-based feature selection against a target observable.
 - `7_DIIB-modes.ipynb`: same as `6_DIIB-feature-selection.ipynb` but with the pre-selected modes for Molecular Motors (Dihedral/Double Bond/Pyramidalization).
 - `8_DIIB-feature-selection-FOSC.ipynb`: feature-selection workflow analogous to notebook 6, but using FOSC as the target.
-- `8_DIIB-feature-selection-FOSC-TDM.ipynb`: feature-selection workflow analogous to notebook 6, but using FOSC/ΔE (i.e., only the transition dipole moment (TDM) contribution to FOSC) as the target.
 - `9_PCA-DII.ipynb`: DII feature selection for `ΔE`/FOSC using the principal components (PCs)
 - `9_PCA-DII_FOSC-TDM.ipynb`: DII feature selection for FOSC(TDM contribution only) using the principal components (PCs)
 
